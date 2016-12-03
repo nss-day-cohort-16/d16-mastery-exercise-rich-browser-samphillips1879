@@ -1,0 +1,17 @@
+{{> navbar}}
+
+
+
+{{#each toys}}  {{! to use a helper, reference name and pass in args separated by space }}
+	<div id="card--{{@index}}" class="card-wrapper" style="border: 2px solid {{color}}">
+		<h3>{{name}}</h3>
+		<img src="{{image}}">
+		<div class="toy-price">${{price}}</div>
+		<p class="toy-description">{{description}}</p>
+
+		{{!-- {{#if purchased}}
+			<span class="card-sold">SOLD!</span>
+		{{/if}} --}}
+
+	</div>
+{{/each}}
